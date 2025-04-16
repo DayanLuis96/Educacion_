@@ -1,0 +1,143 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project        :   ADMIX - HTML5 Bootstrap Admin Template
+Version        :   V.1
+Create Date    :   24/05/20
+Copyright      :   Spruko Technologies Private Limited 
+Author         :   SprukoSoft
+Author URL     :   https://themeforest.net/user/sprukosoft
+Support	       :   support@spruko.com
+License        :   Licensed under ThemeForest License
+
+-------------------------------------------------------------------*/
+
+/*
+accept-cookies
+accordion
+amazeui.datetimepicker
+autocomplete
+button
+checkboxradio
+controlgroup
+cookies
+core
+dataTables.bootstrap4
+datepicker
+dialog
+draggable
+dragula
+fancy_fileupload
+fullcalendar.min
+fullcalendar.print.min
+gallery
+inputtags
+ion.rangeSlider
+ion.rangeSlider.skinFlat
+ion.rangeSlider.skinSimple
+jquery-steps
+jquery-ui-darggable
+jquery-ui.min
+jquery-ui.structure.min
+jquery-ui.theme.min
+jquery.simple-dtpicker
+jquery.steps
+leaflet
+lightslider.min
+menu
+morris
+multislider
+normalize
+notifIt
+owl.carousel
+picker.min
+progressbar
+resizable
+select2.min
+selectable
+selectmenu
+sidebar
+sidemenu
+simplebar
+slider
+sortable
+sp-dark
+spectrum
+spinner
+style
+sumoselect
+sweetalert
+tabs-2
+tabs
+telephoneinput
+theme
+timeline.min
+tooltip
+treeview
+*/
+
+/* ########## BOOTSTRAP OVERRIDES ########## */
+
+@import "variables";
+
+
+@import "plugins/accept-cookies";
+@import "plugins/accordion";
+@import "plugins/autocomplete";
+@import "plugins/button";
+@import "plugins/calendar";
+@import "plugins/checkboxradio";
+@import "plugins/controlgroup";
+@import "plugins/cookies";
+@import "plugins/core";
+@import "plugins/dataTables.bootstrap";
+@import "plugins/buttons.bootstrap.min";
+@import "plugins/datepicker";
+@import "plugins/dialog";
+@import "plugins/edit-table";
+@import "plugins/modal-datepicker";
+@import "plugins/fancy_fileupload";
+@import "plugins/fileuploads";
+@import "plugins/fullcalendar";
+@import "plugins/gallery";
+@import "plugins/inputtags";
+@import "plugins/ion.rangeSlider";
+@import "plugins/ion.rangeSlider.skinFlat";
+// @import "plugins/ion.rangeSlider.skinSimple";
+@import "plugins/richtext";
+@import "plugins/jquery-steps";
+@import "plugins/jquery-ui.structure.min";
+@import "plugins/jquery.simple-dtpicker";
+@import "plugins/leaflet";
+@import "plugins/lightslider.min";
+@import "plugins/menu";
+@import "plugins/morris";
+@import "plugins/multislider";
+@import "plugins/normalize";
+@import "plugins/notifIt";
+@import "plugins/owl.carousel";
+@import "plugins/progressbar";
+@import "plugins/resizable";
+@import "plugins/select2.min";
+@import "plugins/selectable";
+@import "plugins/selectmenu";
+@import "plugins/sidebar";
+@import "plugins/simplebar";
+@import "plugins/slider";
+@import "plugins/sortable";
+@import "plugins/sp-dark";
+@import "plugins/spectrum";
+@import "plugins/spinner";
+@import "plugins/style";
+@import "plugins/sumoselect";
+@import "plugins/summernote";
+@import "plugins/telephoneinput";
+@import "plugins/sweetalert";
+@import "plugins/telephoneinput";
+@import "plugins/timeline.min";
+@import "plugins/tooltip";
+@import "plugins/treeview";
+@import "plugins/twentytwenty";
+@import "plugins/quill.bubble";
+@import "plugins/quill.snow";
+@import "plugins/ratings-2";

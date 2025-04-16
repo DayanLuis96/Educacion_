@@ -1,0 +1,106 @@
+﻿
+html,
+body {
+}
+.menu-fixed {
+    width: 260px;
+    float: right;
+    text-align: right;
+    padding: 4px 0 5px 0;
+    list-style-type: none;
+}
+
+    .menu-fixed li {
+        display: inline;
+    }
+
+    .menu-fixed a {
+        ont-size: 0.9em;
+        color: #fff;
+        text-shadow: 1px 1px #5E8BC5;
+        padding: 0 0 0 10px;
+    }
+.fixmenu {
+    width: 1122px;
+    height: 30px;
+    margin-left: -48px;
+    padding: 5px 48px;
+    position: fixed;
+    top: 0;
+    background: #7eb7d9;
+    display: none;
+}
+
+/*Eliminamos los margenes y paddings que agrega el navegador por defecto*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*Agregamos margenes inferiores a los parrafos*/
+p {
+    margin-bottom: 20px;
+}
+
+header {
+   /* background: ;*/
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0px;
+    left: -4px;
+    background-color:white;
+}
+
+nav {
+    float: left; /* Desplazamos el nav hacia la izquierda */
+}
+
+    nav ul {
+        list-style: none;
+        overflow: hidden; /* Limpiamos errores de float */
+    }
+
+        nav ul li {
+            float: left;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+
+            nav ul li a {
+                display: block; /* Convertimos los elementos a en elementos bloque para manipular el padding */
+                padding: 20px;
+                color: #fff;
+                text-decoration: none;
+            }
+
+            nav ul li:hover {
+                background: white;
+            }
+
+
+.contenido {
+    padding-top: 80px;
+}
+
+.wrapper {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.caja {
+    width: 100%;
+    color:black;
+    outline: none;
+    font-size: .9em;
+    line-height: 25px;
+    
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 2px solid #0b6fb2;
+    -webkit-appearance: none;
+    margin: .3em 0 1em;
+    font-family: roboto,sans-serif;
+    background: rgba(127,178,212,.31)
+}

@@ -1,0 +1,33 @@
+﻿.asignar-consultorio {
+    position: relative;
+    /*display: inline-block;*/
+    /* padding: 0.45rem 0.7rem;*/
+    /*color: cornflowerblue;*/
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    /*margin-right: 50px;*/
+    animation: animate3 2s linear infinite;
+    text-align: center;
+    border: 12px;
+}
+
+@keyframes animate3 {
+    0% {
+        background: rgb(223, 215, 215);
+        color: #050801;
+    }
+
+    10% {
+        background: #1a4975;
+        color: #ffffff;
+        box-shadow: 0 0 5px #1a4975, 0 0 5px #1a4975, 0 0 5px #1a4975, 0 0 5px #1a4975;
+    }
+
+    10% {
+        background: rgb(223, 215, 215);
+        color: #050801;
+    }
+}
