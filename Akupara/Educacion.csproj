@@ -239,55 +239,18 @@
     <Content Include="assets\Logo.png" />
     <Content Include="assets\Akup.png" />
     <Content Include="assets\Logoblanco.png" />
+    <Content Include="Educacion\Aplicacion\Pagina\Areas_Asignaturas\Areas.aspx" />
+    <Content Include="Educacion\Aplicacion\Pagina\Areas_Asignaturas\Asignaturas.aspx" />
+    <Content Include="Educacion\Aplicacion\Pagina\Config Institucion\Config_Institucion.aspx" />
     <Content Include="Educacion\Aplicacion\Pagina\Configuracion\Metodos\Metodos.aspx" />
     <Content Include="Educacion\Aplicacion\Pagina\Configuracion\Perfiles\Perfil.aspx" />
     <Content Include="Educacion\Aplicacion\Pagina\Configuracion\Plantilla\Notificacion.aspx" />
     <Content Include="Educacion\Aplicacion\Pagina\Configuracion\Servicios\Servicios.aspx" />
     <Content Include="Educacion\Aplicacion\Pagina\Configuracion\Usuarios\ConsultaUsuario.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Cotizacion\Cotizacion.aspx" />
+    <Content Include="Educacion\Aplicacion\Pagina\Grados_Cursos\Cursos.aspx" />
+    <Content Include="Educacion\Aplicacion\Pagina\Grados_Cursos\Grados.aspx" />
     <Content Include="Educacion\Aplicacion\Pagina\Inicial.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Inventario\Articulos.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Inventario\Baja\BajaArticulo.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Inventario\Entrada\Entrada_Articulos.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Inventario\InsumosNavg\DetalleInsumoAgregados.ascx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Inventario\Reportes\DetalleReporte.ascx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Inventario\Reportes\Reportes_Inventario.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Backup\Backup_muestras.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Backup\CargueFinalResultadosCrudos.ascx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Backup\CargueResultadoMuestra.ascx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Backup\DetalleMuestras_.ascx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\Informe.ascx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\Inventario.ascx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\Metodo.ascx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\Protocolo.ascx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\Punto_Chequeo.ascx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\Resultado.ascx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\FaseFourRedis.ascx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\FaseOneRedis.ascx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\FaseThreeRedis.ascx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\FaseTwoRedis.ascx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Navg\GestionResultados.ascx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\CargueAdjuntos.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\CargueMasivo.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Gestionar_Procesamiento.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\jsLoadFIle.js" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Procesamiento.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\ReportInforme.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Resultados.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Ver_protocolo.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Revision\Asinar_revisor.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Revision\Revision_Muestras.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Revision\Ver_prefactura.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Plantillas\Anexo_1a.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Plantillas\Anexo_1b.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Plantillas\Anexo_2.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Plantillas\Anexo_3.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Plantillas\Anexo_4.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Resultado\Imagenes\ADN_3D_Jetudo_22-09-2020.Tif" />
-    <Content Include="Educacion\Aplicacion\Pagina\Solicitudes\Analisis\ListaSolicitudes.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Solicitudes\Mis_solicitudes.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Solicitudes\Solicitud.aspx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Solicitudes\Ver_cotizacion.aspx" />
+    <Content Include="Educacion\Aplicacion\Pagina\Malla_curricular\Malla_curricular.aspx" />
     <Content Include="Educacion\assets\bootstrap.min.css" />
     <Content Include="Educacion\assets\Creditor\ckeditor.js" />
     <Content Include="Educacion\assets\css\animate.css" />
@@ -4638,21 +4601,12 @@
     <Content Include="Content\ProStyles\vendors\themefy_icon\fonts\themify9f24.ttf" />
     <Content Include="Content\ProStyles\vendors\themefy_icon\fonts\themify9f24.woff" />
     <Content Include="Content\ProStyles\vendors\themefy_icon\fonts\themifyd41d.eot" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Preview\GeneJET_Genomic_TermoScientific.pdf" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Preview\GENEON_Vivantis.pdf" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Preview\PureLink Silica Columns _ThermoFisherScientific.pdf" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Preview\MagMAXs_TermoFisherScientific_Kingfisher.pdf" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Preview\manual king fisher.pdf" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Preview\PurePrep_Molgen_Kingfisher.pdf" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Preview\DNeasy_Blood_Tissue_Qiagen.pdf" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Preview\FICHA TÉCNICA  NANODROP.pdf" />
     <Content Include="Educacion\assets\css\plugins.scss" />
     <Content Include="Educacion\assets\css\_variables.scss" />
     <Content Include="Archivos\Cargados\Anexo1a_O&amp;T_Sec_Afrag_ej1.xlsx" />
     <Content Include="Educacion\Aplicacion\Pagina\Archivos\Cargados\Anexo1a_O&amp;T_Sec_Afrag_ej1.xlsx" />
     <Content Include="Educacion\Aplicacion\Pagina\Archivos\Cargados\clientepru\Anexo3_AnálisisFragmentos&amp;InformaciónLoci %283%29.xlsx" />
     <Content Include="Educacion\Aplicacion\Pagina\Archivos\Cargados\clientepru\Anexo1a_O&amp;T_Sec_Afrag_ej1.xlsx" />
-    <Content Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Preview\PCR1.pdf" />
     <None Include="Dockerfile" />
     <None Include=".dockerignore">
       <DependentUpon>Dockerfile</DependentUpon>
@@ -4714,6 +4668,27 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Educacion\Aplicacion\Pagina\Areas_Asignaturas\Areas.aspx.cs">
+      <DependentUpon>Areas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Educacion\Aplicacion\Pagina\Areas_Asignaturas\Areas.aspx.designer.cs">
+      <DependentUpon>Areas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Educacion\Aplicacion\Pagina\Areas_Asignaturas\Asignaturas.aspx.cs">
+      <DependentUpon>Asignaturas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Educacion\Aplicacion\Pagina\Areas_Asignaturas\Asignaturas.aspx.designer.cs">
+      <DependentUpon>Asignaturas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Educacion\Aplicacion\Pagina\Config Institucion\Config_Institucion.aspx.cs">
+      <DependentUpon>Config_Institucion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Educacion\Aplicacion\Pagina\Config Institucion\Config_Institucion.aspx.designer.cs">
+      <DependentUpon>Config_Institucion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Educacion\Aplicacion\Pagina\Configuracion\Metodos\Metodos.aspx.cs">
       <DependentUpon>Metodos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4751,12 +4726,19 @@
     <Compile Include="Educacion\Aplicacion\Pagina\Configuracion\Usuarios\ConsultaUsuario.aspx.designer.cs">
       <DependentUpon>ConsultaUsuario.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Cotizacion\Cotizacion.aspx.cs">
-      <DependentUpon>Cotizacion.aspx</DependentUpon>
+    <Compile Include="Educacion\Aplicacion\Pagina\Grados_Cursos\Cursos.aspx.cs">
+      <DependentUpon>Cursos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Cotizacion\Cotizacion.aspx.designer.cs">
-      <DependentUpon>Cotizacion.aspx</DependentUpon>
+    <Compile Include="Educacion\Aplicacion\Pagina\Grados_Cursos\Cursos.aspx.designer.cs">
+      <DependentUpon>Cursos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Educacion\Aplicacion\Pagina\Grados_Cursos\Grados.aspx.cs">
+      <DependentUpon>Grados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Educacion\Aplicacion\Pagina\Grados_Cursos\Grados.aspx.designer.cs">
+      <DependentUpon>Grados.aspx</DependentUpon>
     </Compile>
     <Compile Include="Educacion\Aplicacion\Pagina\Inicial.aspx.cs">
       <DependentUpon>Inicial.aspx</DependentUpon>
@@ -4765,286 +4747,12 @@
     <Compile Include="Educacion\Aplicacion\Pagina\Inicial.aspx.designer.cs">
       <DependentUpon>Inicial.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Inventario\Articulos.aspx.cs">
-      <DependentUpon>Articulos.aspx</DependentUpon>
+    <Compile Include="Educacion\Aplicacion\Pagina\Malla_curricular\Malla_curricular.aspx.cs">
+      <DependentUpon>Malla_curricular.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Inventario\Articulos.aspx.designer.cs">
-      <DependentUpon>Articulos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Inventario\Baja\BajaArticulo.aspx.cs">
-      <DependentUpon>BajaArticulo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Inventario\Baja\BajaArticulo.aspx.designer.cs">
-      <DependentUpon>BajaArticulo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Inventario\Entrada\Entrada_Articulos.aspx.cs">
-      <DependentUpon>Entrada_Articulos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Inventario\Entrada\Entrada_Articulos.aspx.designer.cs">
-      <DependentUpon>Entrada_Articulos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Inventario\InsumosNavg\DetalleInsumoAgregados.ascx.cs">
-      <DependentUpon>DetalleInsumoAgregados.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Inventario\InsumosNavg\DetalleInsumoAgregados.ascx.designer.cs">
-      <DependentUpon>DetalleInsumoAgregados.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Inventario\Reportes\DetalleReporte.ascx.cs">
-      <DependentUpon>DetalleReporte.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Inventario\Reportes\DetalleReporte.ascx.designer.cs">
-      <DependentUpon>DetalleReporte.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Inventario\Reportes\Reportes_Inventario.aspx.cs">
-      <DependentUpon>Reportes_Inventario.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Inventario\Reportes\Reportes_Inventario.aspx.designer.cs">
-      <DependentUpon>Reportes_Inventario.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Backup\Backup_muestras.aspx.cs">
-      <DependentUpon>Backup_muestras.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Backup\Backup_muestras.aspx.designer.cs">
-      <DependentUpon>Backup_muestras.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Backup\CargueFinalResultadosCrudos.ascx.cs">
-      <DependentUpon>CargueFinalResultadosCrudos.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Backup\CargueFinalResultadosCrudos.ascx.designer.cs">
-      <DependentUpon>CargueFinalResultadosCrudos.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Backup\CargueResultadoMuestra.ascx.cs">
-      <DependentUpon>CargueResultadoMuestra.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Backup\CargueResultadoMuestra.ascx.designer.cs">
-      <DependentUpon>CargueResultadoMuestra.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Backup\DetalleMuestras_.ascx.cs">
-      <DependentUpon>DetalleMuestras_.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Backup\DetalleMuestras_.ascx.designer.cs">
-      <DependentUpon>DetalleMuestras_.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\Informe.ascx.cs">
-      <DependentUpon>Informe.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\Informe.ascx.designer.cs">
-      <DependentUpon>Informe.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\Inventario.ascx.cs">
-      <DependentUpon>Inventario.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\Inventario.ascx.designer.cs">
-      <DependentUpon>Inventario.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\Metodo.ascx.cs">
-      <DependentUpon>Metodo.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\Metodo.ascx.designer.cs">
-      <DependentUpon>Metodo.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\Protocolo.ascx.cs">
-      <DependentUpon>Protocolo.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\Protocolo.ascx.designer.cs">
-      <DependentUpon>Protocolo.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\Punto_Chequeo.ascx.cs">
-      <DependentUpon>Punto_Chequeo.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\Punto_Chequeo.ascx.designer.cs">
-      <DependentUpon>Punto_Chequeo.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\Resultado.ascx.cs">
-      <DependentUpon>Resultado.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\Resultado.ascx.designer.cs">
-      <DependentUpon>Resultado.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\FaseFourRedis.ascx.cs">
-      <DependentUpon>FaseFourRedis.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\FaseFourRedis.ascx.designer.cs">
-      <DependentUpon>FaseFourRedis.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\FaseOneRedis.ascx.cs">
-      <DependentUpon>FaseOneRedis.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\FaseOneRedis.ascx.designer.cs">
-      <DependentUpon>FaseOneRedis.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\FaseThreeRedis.ascx.cs">
-      <DependentUpon>FaseThreeRedis.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\FaseThreeRedis.ascx.designer.cs">
-      <DependentUpon>FaseThreeRedis.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\FaseTwoRedis.ascx.cs">
-      <DependentUpon>FaseTwoRedis.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\FasesMuestra\FaseTwoRedis.ascx.designer.cs">
-      <DependentUpon>FaseTwoRedis.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\GestionResultados.ascx.cs">
-      <DependentUpon>GestionResultados.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Navg\GestionResultados.ascx.designer.cs">
-      <DependentUpon>GestionResultados.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\CargueAdjuntos.aspx.cs">
-      <DependentUpon>CargueAdjuntos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\CargueAdjuntos.aspx.designer.cs">
-      <DependentUpon>CargueAdjuntos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\CargueMasivo.aspx.cs">
-      <DependentUpon>CargueMasivo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\CargueMasivo.aspx.designer.cs">
-      <DependentUpon>CargueMasivo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Gestionar_Procesamiento.aspx.cs">
-      <DependentUpon>Gestionar_Procesamiento.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Gestionar_Procesamiento.aspx.designer.cs">
-      <DependentUpon>Gestionar_Procesamiento.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Procesamiento.aspx.cs">
-      <DependentUpon>Procesamiento.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Procesamiento.aspx.designer.cs">
-      <DependentUpon>Procesamiento.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\ReportInforme.aspx.cs">
-      <DependentUpon>ReportInforme.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\ReportInforme.aspx.designer.cs">
-      <DependentUpon>ReportInforme.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Resultados.aspx.cs">
-      <DependentUpon>Resultados.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Resultados.aspx.designer.cs">
-      <DependentUpon>Resultados.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\ValidacionEtapas.cs" />
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Ver_protocolo.aspx.cs">
-      <DependentUpon>Ver_protocolo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Procesamiento\Ver_protocolo.aspx.designer.cs">
-      <DependentUpon>Ver_protocolo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Revision\Asinar_revisor.aspx.cs">
-      <DependentUpon>Asinar_revisor.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Revision\Asinar_revisor.aspx.designer.cs">
-      <DependentUpon>Asinar_revisor.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Revision\Revision_Muestras.aspx.cs">
-      <DependentUpon>Revision_Muestras.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Revision\Revision_Muestras.aspx.designer.cs">
-      <DependentUpon>Revision_Muestras.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Revision\Ver_prefactura.aspx.cs">
-      <DependentUpon>Ver_prefactura.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Muestras\Revision\Ver_prefactura.aspx.designer.cs">
-      <DependentUpon>Ver_prefactura.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Plantillas\Anexo_1a.aspx.cs">
-      <DependentUpon>Anexo_1a.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Plantillas\Anexo_1a.aspx.designer.cs">
-      <DependentUpon>Anexo_1a.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Plantillas\Anexo_1b.aspx.cs">
-      <DependentUpon>Anexo_1b.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Plantillas\Anexo_1b.aspx.designer.cs">
-      <DependentUpon>Anexo_1b.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Plantillas\Anexo_2.aspx.cs">
-      <DependentUpon>Anexo_2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Plantillas\Anexo_2.aspx.designer.cs">
-      <DependentUpon>Anexo_2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Plantillas\Anexo_3.aspx.cs">
-      <DependentUpon>Anexo_3.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Plantillas\Anexo_3.aspx.designer.cs">
-      <DependentUpon>Anexo_3.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Plantillas\Anexo_4.aspx.cs">
-      <DependentUpon>Anexo_4.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Plantillas\Anexo_4.aspx.designer.cs">
-      <DependentUpon>Anexo_4.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Solicitudes\Analisis\ListaSolicitudes.aspx.cs">
-      <DependentUpon>ListaSolicitudes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Solicitudes\Analisis\ListaSolicitudes.aspx.designer.cs">
-      <DependentUpon>ListaSolicitudes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Solicitudes\Mis_solicitudes.aspx.cs">
-      <DependentUpon>Mis_solicitudes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Solicitudes\Mis_solicitudes.aspx.designer.cs">
-      <DependentUpon>Mis_solicitudes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Solicitudes\Solicitud.aspx.cs">
-      <DependentUpon>Solicitud.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Solicitudes\Solicitud.aspx.designer.cs">
-      <DependentUpon>Solicitud.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Solicitudes\Ver_cotizacion.aspx.cs">
-      <DependentUpon>Ver_cotizacion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Educacion\Aplicacion\Pagina\Solicitudes\Ver_cotizacion.aspx.designer.cs">
-      <DependentUpon>Ver_cotizacion.aspx</DependentUpon>
+    <Compile Include="Educacion\Aplicacion\Pagina\Malla_curricular\Malla_curricular.aspx.designer.cs">
+      <DependentUpon>Malla_curricular.aspx</DependentUpon>
     </Compile>
     <Compile Include="Educacion\Aplicacion\Principal\MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
