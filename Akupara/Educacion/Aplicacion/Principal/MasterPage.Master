@@ -344,8 +344,8 @@
                 <div class="app-sidebar__overlay bg-primary" data-toggle="sidebar"></div>
                 <aside class="app-sidebar">
                     <div class="side-tab-body p-0 border-0 resp-vtabs hor_1 " id="sidemenu-Tab" style="display: block; width: 100%; margin: 0px;">
-                        <nav class="first-sidemenu ps ps--active-y shadow" style="background-color:white">
-                            <div class="text-center " style="background-color:#3c8dbc">
+                        <nav class="first-sidemenu ps ps--active-y shadow" >
+                            <div class="text-center " >
 
                                 <a class="active">
                                     <asp:ImageButton runat="server" OnClick="Unnamed_Click" class="fav-icon" alt="image" ImageUrl="~/Educacion/assets/img/Logosie.png" />
