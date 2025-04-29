@@ -239,6 +239,9 @@
     <Content Include="assets\Logo.png" />
     <Content Include="assets\Akup.png" />
     <Content Include="assets\Logoblanco.png" />
+    <Content Include="Content\Modal_toast\toast.min.js" />
+    <Content Include="Content\Modal_toast\toastr.min.css" />
+    <Content Include="Content\Modal_toast\toastr2.min.js" />
     <Content Include="Educacion\Aplicacion\Pagina\Areas_Asignaturas\Areas.aspx" />
     <Content Include="Educacion\Aplicacion\Pagina\Areas_Asignaturas\Asignaturas.aspx" />
     <Content Include="Educacion\Aplicacion\Pagina\Config Institucion\Config_Institucion.aspx" />
