@@ -14,6 +14,14 @@
         }
     </style>
     <meta charset="UTF-8">
+     <!-- jQuery primero -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
@@ -344,8 +352,8 @@
                 <div class="app-sidebar__overlay bg-primary" data-toggle="sidebar"></div>
                 <aside class="app-sidebar">
                     <div class="side-tab-body p-0 border-0 resp-vtabs hor_1 " id="sidemenu-Tab" style="display: block; width: 100%; margin: 0px;">
-                        <nav class="first-sidemenu ps ps--active-y shadow" >
-                            <div class="text-center " >
+                        <nav class="first-sidemenu ps ps--active-y shadow">
+                            <div class="text-center ">
 
                                 <a class="active">
                                     <asp:ImageButton runat="server" OnClick="Unnamed_Click" class="fav-icon" alt="image" ImageUrl="~/Educacion/assets/img/Logosie.png" />
@@ -498,7 +506,7 @@
                 <!-- Sidemenu closed -->
                 <!-- Main-content -->
                 <div class="main-content">
-                    <div class="main-header main-header-fixed" style="background-color:#3c8dbc">
+                    <div class="main-header main-header-fixed" style="background-color: #3c8dbc">
                         <div class="container-fluid">
                             <div class="main-header-left">
                                 <a href="#" data-toggle="sidebar" class="nav-link icon toggle pl-0">
@@ -510,7 +518,7 @@
                                 <div class="header-breadcrumb">
                                     <h5 class="mb-1" style="color: white">Sie - Calidad Educativa</h5>
                                     <div class="main-content-breadcrumb">
-                                        <span style="color:white">Página</span>
+                                        <span style="color: white">Página</span>
                                         <asp:Label ForeColor="White" runat="server" ID="txtopcionmenu"></asp:Label>
                                     </div>
                                 </div>

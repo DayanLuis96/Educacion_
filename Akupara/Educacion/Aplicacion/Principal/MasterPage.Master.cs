@@ -127,7 +127,7 @@ namespace Educacion.Educacion.Aplicacion.Principal
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@OPERACION", SqlDbType.Int).Value = 1;
                 cmd.Parameters.Add("@IDROL", SqlDbType.Int).Value = _ID_ROL;
-                cmd.ExecuteNonQuery();
+                //cmd.ExecuteNonQuery();
 
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -163,7 +163,7 @@ namespace Educacion.Educacion.Aplicacion.Principal
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.Add("@OPERACION", SqlDbType.Int).Value = 2;
                     cmd.Parameters.Add("@IDROL", SqlDbType.Int).Value = _ID_ROL;
-                    cmd.ExecuteNonQuery();
+                    //cmd.ExecuteNonQuery();
 
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -206,7 +206,7 @@ namespace Educacion.Educacion.Aplicacion.Principal
                     cmd.Parameters.Add("@IDLATERALHIJO", SqlDbType.Int).Value = IDmENU;
                     cmd.Parameters.Add("@IDROL", SqlDbType.Int).Value = _ID_ROL;
 
-                    cmd.ExecuteNonQuery();
+                    //cmd.ExecuteNonQuery();
 
                     SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();

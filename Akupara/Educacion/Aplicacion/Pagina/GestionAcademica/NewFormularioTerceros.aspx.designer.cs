@@ -11,8 +11,17 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
 {
 
 
-    public partial class NewCrearTercero
+    public partial class NewFormularioTerceros
     {
+
+        /// <summary>
+        /// Control form1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
         /// Control txttipodocumento.
@@ -31,15 +40,6 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdocumento;
-
-        /// <summary>
-        /// Control btnguardardatos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnguardardatos;
 
         /// <summary>
         /// Control txtprimernombre.
@@ -112,15 +112,6 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList txtgruposanguineo;
-
-        /// <summary>
-        /// Control txtfactorrh.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList txtfactorrh;
 
         /// <summary>
         /// Control txtcorreo.
@@ -276,31 +267,31 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
         protected global::System.Web.UI.WebControls.TextBox txtpersonasautorizadas;
 
         /// <summary>
-        /// Control checesquemavacunacion.
+        /// Control txtvacunasactualizadas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox checesquemavacunacion;
+        protected global::System.Web.UI.WebControls.DropDownList txtvacunasactualizadas;
 
         /// <summary>
-        /// Control txtaniolectivos.
+        /// Control txtaniolectivo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList txtaniolectivos;
+        protected global::System.Web.UI.WebControls.TextBox txtaniolectivo;
 
         /// <summary>
-        /// Control txtgrados.
+        /// Control txtgrado.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList txtgrados;
+        protected global::System.Web.UI.WebControls.TextBox txtgrado;
 
         /// <summary>
         /// Control txtjornada.
@@ -330,13 +321,13 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
         protected global::System.Web.UI.WebControls.DropDownList txtmodalidad;
 
         /// <summary>
-        /// Control txtsedes.
+        /// Control txtsede.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList txtsedes;
+        protected global::System.Web.UI.WebControls.TextBox txtsede;
 
         /// <summary>
         /// Control txtcodigointerno.

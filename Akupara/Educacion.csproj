@@ -247,6 +247,9 @@
     <Content Include="Educacion\Aplicacion\Pagina\Configuracion\Plantilla\Notificacion.aspx" />
     <Content Include="Educacion\Aplicacion\Pagina\Configuracion\Servicios\Servicios.aspx" />
     <Content Include="Educacion\Aplicacion\Pagina\Configuracion\Usuarios\ConsultaUsuario.aspx" />
+    <Content Include="Educacion\Aplicacion\Pagina\GestionAcademica\NewConsultarTerceros.aspx" />
+    <Content Include="Educacion\Aplicacion\Pagina\GestionAcademica\NewCrearTercero.aspx" />
+    <Content Include="Educacion\Aplicacion\Pagina\GestionAcademica\NewFormularioTerceros.aspx" />
     <Content Include="Educacion\Aplicacion\Pagina\Grados_Cursos\Cursos.aspx" />
     <Content Include="Educacion\Aplicacion\Pagina\Grados_Cursos\Grados.aspx" />
     <Content Include="Educacion\Aplicacion\Pagina\Inicial.aspx" />
@@ -882,6 +885,30 @@
     <Content Include="css\timepicker\bootstrap-timepicker.css" />
     <Content Include="css\timepicker\bootstrap-timepicker.min.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-grid.css" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-grid.min.css" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-grid.rtl.css" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-reboot.css" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-reboot.min.css" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-reboot.rtl.css" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-utilities.css" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-utilities.min.css" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-utilities.rtl.css" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap.css" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap.min.css" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap.rtl.css" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap.rtl.min.css" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\js\bootstrap.bundle.js" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\js\bootstrap.bundle.min.js" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\js\bootstrap.esm.js" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\js\bootstrap.esm.min.js" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\js\bootstrap.js" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\js\bootstrap.min.js" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\Mensaje_Modal\sweetalert.min.css" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\Mensaje_Modal\sweetalert.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fontawesom\css\all.css" />
     <Content Include="fontawesom\css\all.min.css" />
@@ -4611,6 +4638,28 @@
     <None Include=".dockerignore">
       <DependentUpon>Dockerfile</DependentUpon>
     </None>
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-grid.css.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-grid.min.css.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-reboot.css.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-utilities.css.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-utilities.min.css.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap.css.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap.min.css.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap.rtl.css.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\js\bootstrap.bundle.js.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\js\bootstrap.esm.js.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\js\bootstrap.esm.min.js.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\js\bootstrap.js.map" />
+    <Content Include="Educacion\Stilos_JS_Boostrapp_5\js\bootstrap.min.js.map" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
@@ -4725,6 +4774,27 @@
     </Compile>
     <Compile Include="Educacion\Aplicacion\Pagina\Configuracion\Usuarios\ConsultaUsuario.aspx.designer.cs">
       <DependentUpon>ConsultaUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Educacion\Aplicacion\Pagina\GestionAcademica\NewConsultarTerceros.aspx.cs">
+      <DependentUpon>NewConsultarTerceros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Educacion\Aplicacion\Pagina\GestionAcademica\NewConsultarTerceros.aspx.designer.cs">
+      <DependentUpon>NewConsultarTerceros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Educacion\Aplicacion\Pagina\GestionAcademica\NewCrearTercero.aspx.cs">
+      <DependentUpon>NewCrearTercero.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Educacion\Aplicacion\Pagina\GestionAcademica\NewCrearTercero.aspx.designer.cs">
+      <DependentUpon>NewCrearTercero.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Educacion\Aplicacion\Pagina\GestionAcademica\NewFormularioTerceros.aspx.cs">
+      <DependentUpon>NewFormularioTerceros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Educacion\Aplicacion\Pagina\GestionAcademica\NewFormularioTerceros.aspx.designer.cs">
+      <DependentUpon>NewFormularioTerceros.aspx</DependentUpon>
     </Compile>
     <Compile Include="Educacion\Aplicacion\Pagina\Grados_Cursos\Cursos.aspx.cs">
       <DependentUpon>Cursos.aspx</DependentUpon>

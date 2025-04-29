@@ -1,26 +1,19 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Educacion/Aplicacion/Principal/MasterPage.Master" AutoEventWireup="true" CodeBehind="NewCrearTercero.aspx.cs" Inherits="Akupara.Educacion.Aplicacion.Pagina.GestionAcademica.NewCrearTercero" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NewFormularioTerceros.aspx.cs" Inherits="Akupara.Educacion.Aplicacion.Pagina.GestionAcademica.NewFormularioTerceros" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="../../../Stilos_JS_Boostrapp_5/css/bootstrap.css" rel="stylesheet" />
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+        <link href="../../../Stilos_JS_Boostrapp_5/css/bootstrap.css" rel="stylesheet" />
     <link href="../../../Stilos_JS_Boostrapp_5/css/bootstrap.min.css" rel="stylesheet" />
     <script src="../../../Stilos_JS_Boostrapp_5/js/bootstrap.js"></script>
     <script src="../../../Stilos_JS_Boostrapp_5/js/bootstrap.min.js"></script>
-    <link href="../../../Stilos_JS_Boostrapp_5/Mensaje_Modal/sweetalert.min.css" rel="stylesheet" />
-    <script src="../../../Stilos_JS_Boostrapp_5/Mensaje_Modal/sweetalert.min.js"></script>
-    <!-- jQuery primero -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Select2 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-
-    <!-- Select2 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
-
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <h5 class="text-primary">📄 Datos básicos del alumno
+</head>
+<body>
+    <form id="form1" runat="server">
+        <h5 class="text-primary">📄 Datos básicos del alumno
     </h5>
     <hr class="mb-4">
     <div class=" row">
@@ -42,11 +35,6 @@
                     </div>
                     <asp:TextBox runat="server" CssClass="form-control form-control-sm" ID="txtdocumento" />
                 </div>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="form-group">
-                <asp:Button Text="Guardar Datos" ID="btnguardardatos" CssClass="btn btn-outline-success btn-sm form-control form-control-sm" OnClick="btnguardardatos_Click" OnClientClick="this.disabled=true;" UseSubmitBehavior="false" runat="server" />
             </div>
         </div>
     </div>
@@ -145,8 +133,8 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">Grupo Sanguíneo</span>
                     </div>
-                    <asp:DropDownList ID="txtgruposanguineo" runat="server" CssClass="form-control form-control-sm" />
-                    <asp:DropDownList ID="txtfactorrh" runat="server" CssClass="form-control form-control-sm" />
+                    <asp:DropDownList ID="txtgruposanguineo" runat="server" CssClass="form-control form-control-sm">
+                    </asp:DropDownList>
                 </div>
             </div>
         </div>
@@ -203,10 +191,26 @@
     </div>
 
     <div class="row">
+        <!-- Departamento -->
+        <%-- <div class="col-md-6">
+            <div class="form-group">
+                <div class="input-group input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Departamento*</span>
+                    </div>
+                    <asp:TextBox runat="server" CssClass="form-control form-control-sm" ID="txtdepartamento" />
+                </div>
+            </div>
+        </div>--%>
         <!-- Municipio -->
         <div class="col-md-6">
             <div class="form-group">
-                <asp:DropDownList ID="txtmunicipio" runat="server" CssClass="select2 form-control   form-control-sm " />
+                <div class="input-group input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Municipio*</span>
+                    </div>
+                    <asp:DropDownList ID="txtmunicipio" runat="server" CssClass="form-control form-control-sm" />
+                </div>
             </div>
         </div>
         <!-- Dirección -->
@@ -362,7 +366,16 @@
         <!-- Vacunas Actualizadas -->
         <div class="col-md-4">
             <div class="form-group">
-                <asp:CheckBox Text="Esquema Vacunacion Actualizado" ID="checesquemavacunacion" CssClass="badge badge-info" runat="server" />
+                <div class="input-group input-group-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Vacunas Actualizadas*</span>
+                    </div>
+                    <asp:DropDownList ID="txtvacunasactualizadas" runat="server" CssClass="form-control form-control-sm">
+                        <asp:ListItem Text="Seleccione..." Value="" />
+                        <asp:ListItem Text="Sí" Value="Si" />
+                        <asp:ListItem Text="No" Value="No" />
+                    </asp:DropDownList>
+                </div>
             </div>
         </div>
     </div>
@@ -380,7 +393,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">Año Lectivo*</span>
                     </div>
-                     <asp:DropDownList ID="txtaniolectivos" runat="server" CssClass="form-control form-control-sm" />  
+                    <asp:TextBox ID="txtaniolectivo" runat="server" CssClass="form-control form-control-sm" TextMode="Number" />
                 </div>
             </div>
         </div>
@@ -391,8 +404,8 @@
                 <div class="input-group input-group-sm">
                     <div class="input-group-prepend">
                         <span class="input-group-text">Grado*</span>
-                    </div> 
-                     <asp:DropDownList ID="txtgrados" runat="server" CssClass="form-control form-control-sm" /> 
+                    </div>
+                    <asp:TextBox ID="txtgrado" runat="server" CssClass="form-control form-control-sm" />
                 </div>
             </div>
         </div>
@@ -404,7 +417,13 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">Jornada*</span>
                     </div>
-                    <asp:DropDownList ID="txtjornada" runat="server" CssClass="form-control form-control-sm" />
+                    <asp:DropDownList ID="txtjornada" runat="server" CssClass="form-control form-control-sm">
+                        <asp:ListItem Text="Seleccione..." Value="" />
+                        <asp:ListItem Text="Mañana" Value="Mañana" />
+                        <asp:ListItem Text="Tarde" Value="Tarde" />
+                        <asp:ListItem Text="Única" Value="Única" />
+                        <asp:ListItem Text="Nocturna" Value="Nocturna" />
+                    </asp:DropDownList>
                 </div>
             </div>
         </div>
@@ -416,7 +435,14 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">Estado Matrícula*</span>
                     </div>
-                    <asp:DropDownList ID="txtestadomatricula" runat="server" CssClass="form-control form-control-sm" />
+                    <asp:DropDownList ID="txtestadomatricula" runat="server" CssClass="form-control form-control-sm">
+                        <asp:ListItem Text="Seleccione..." Value="" />
+                        <asp:ListItem Text="Pre-matriculado" Value="Pre-matriculado" />
+                        <asp:ListItem Text="Matriculado" Value="Matriculado" />
+                        <asp:ListItem Text="Retirado" Value="Retirado" />
+                        <asp:ListItem Text="Egresado" Value="Egresado" />
+                        <asp:ListItem Text="Suspendido" Value="Suspendido" />
+                    </asp:DropDownList>
                 </div>
             </div>
         </div>
@@ -430,7 +456,12 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">Modalidad*</span>
                     </div>
-                    <asp:DropDownList ID="txtmodalidad" runat="server" CssClass="form-control form-control-sm" />
+                    <asp:DropDownList ID="txtmodalidad" runat="server" CssClass="form-control form-control-sm">
+                        <asp:ListItem Text="Seleccione..." Value="" />
+                        <asp:ListItem Text="Presencial" Value="Presencial" />
+                        <asp:ListItem Text="Virtual" Value="Virtual" />
+                        <asp:ListItem Text="Alternancia" Value="Alternancia" />
+                    </asp:DropDownList>
                 </div>
             </div>
         </div>
@@ -442,7 +473,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">Sede</span>
                     </div>
-                    <asp:DropDownList ID="txtsedes" runat="server" CssClass="form-control form-control-sm" />
+                    <asp:TextBox ID="txtsede" runat="server" CssClass="form-control form-control-sm" />
                 </div>
             </div>
         </div>
@@ -508,29 +539,6 @@
     <h5 class="text-primary">📎 Documentos Requeridos (Subida de Archivos)
     </h5>
     <hr class="mb-4">
-
-
-    <script type="text/javascript">
-        function aplicarSelect2() {
-            var control = $('#<%= txtmunicipio.ClientID %>');
-            control.select2({
-                placeholder: "Seleccione un municipio",
-                allowClear: true,
-                width: '100%' // Se adapta al ancho
-            });
-        }
-
-        // Para que funcione con PostBack parcial
-        if (typeof Sys !== 'undefined' && Sys.Application) {
-            Sys.Application.add_load(function () {
-                aplicarSelect2();
-            });
-        } else {
-            $(document).ready(function () {
-                aplicarSelect2();
-            });
-        }
-    </script>
-
-
-</asp:Content>
+    </form>
+</body>
+</html>
