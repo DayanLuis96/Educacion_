@@ -250,6 +250,9 @@
     <Content Include="Educacion\Aplicacion\Pagina\GestionAcademica\NewConsultarTerceros.aspx" />
     <Content Include="Educacion\Aplicacion\Pagina\GestionAcademica\NewCrearTercero.aspx" />
     <Content Include="Educacion\Aplicacion\Pagina\GestionAcademica\NewFormularioTerceros.aspx" />
+    <Content Include="Educacion\Aplicacion\Pagina\GestionAdministrativa\ActividadesCompetencias\NewConsultarActividades.aspx" />
+    <Content Include="Educacion\Aplicacion\Pagina\GestionAdministrativa\ActividadesCompetencias\NewCrearActividadesCompetencias.aspx" />
+    <Content Include="Educacion\Aplicacion\Pagina\GestionAdministrativa\NewCrearProfesores.aspx" />
     <Content Include="Educacion\Aplicacion\Pagina\Grados_Cursos\Cursos.aspx" />
     <Content Include="Educacion\Aplicacion\Pagina\Grados_Cursos\Grados.aspx" />
     <Content Include="Educacion\Aplicacion\Pagina\Inicial.aspx" />
@@ -4795,6 +4798,27 @@
     </Compile>
     <Compile Include="Educacion\Aplicacion\Pagina\GestionAcademica\NewFormularioTerceros.aspx.designer.cs">
       <DependentUpon>NewFormularioTerceros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Educacion\Aplicacion\Pagina\GestionAdministrativa\ActividadesCompetencias\NewConsultarActividades.aspx.cs">
+      <DependentUpon>NewConsultarActividades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Educacion\Aplicacion\Pagina\GestionAdministrativa\ActividadesCompetencias\NewConsultarActividades.aspx.designer.cs">
+      <DependentUpon>NewConsultarActividades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Educacion\Aplicacion\Pagina\GestionAdministrativa\ActividadesCompetencias\NewCrearActividadesCompetencias.aspx.cs">
+      <DependentUpon>NewCrearActividadesCompetencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Educacion\Aplicacion\Pagina\GestionAdministrativa\ActividadesCompetencias\NewCrearActividadesCompetencias.aspx.designer.cs">
+      <DependentUpon>NewCrearActividadesCompetencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Educacion\Aplicacion\Pagina\GestionAdministrativa\NewCrearProfesores.aspx.cs">
+      <DependentUpon>NewCrearProfesores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Educacion\Aplicacion\Pagina\GestionAdministrativa\NewCrearProfesores.aspx.designer.cs">
+      <DependentUpon>NewCrearProfesores.aspx</DependentUpon>
     </Compile>
     <Compile Include="Educacion\Aplicacion\Pagina\Grados_Cursos\Cursos.aspx.cs">
       <DependentUpon>Cursos.aspx</DependentUpon>

@@ -18,15 +18,14 @@
                 <div class="form-group">
                     <div class="input-group input-group-sm">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">Alumno</span>
+                            <span class="input-group-text">Persona</span>
                         </div>
                         <asp:TextBox runat="server" CssClass="form-control form-control-sm" ID="txtalumno" />
-                        <asp:Button Text="Buscar Alumno" CssClass="btn btn-outline-success btn-sm" ID="btnbuscar" OnClick="btnbuscar_Click" runat="server" />
-               
-                        </div>
+                        <asp:Button Text="Buscar Persona" CssClass="btn btn-outline-success btn-sm" ID="btnbuscar" OnClick="btnbuscar_Click" runat="server" />
+                    </div>
                 </div>
-            </div> 
-              <div class="col-md-3">
+            </div>
+            <div class="col-md-3">
                 <div class="form-group text-ringt">
                     <asp:Button Text="Nuevo Registro" CssClass="btn btn-outline-success btn-sm" ID="btnnuevo" OnClick="btnnuevo_Click" runat="server" />
                 </div>
@@ -39,7 +38,7 @@
                         <Columns>
                             <asp:TemplateField>
                                 <ItemTemplate>
-                                    <asp:Button Text="Editar" ID="btneditar" CssClass="btn btn-outline-primary btn-sm" CommandArgument='<%# Bind("ID") %>' runat="server" />
+                                    <asp:Button Text="Editar" ID="btneditar" CssClass="btn btn-outline-primary btn-sm" OnCommand="btneditar_Command" CommandArgument='<%# Bind("ID") %>' runat="server" />
                                     <asp:Label runat="server" ID="txtid" Visible="false" Text='<%# Bind("ID") %>'></asp:Label>
                                 </ItemTemplate>
                             </asp:TemplateField>

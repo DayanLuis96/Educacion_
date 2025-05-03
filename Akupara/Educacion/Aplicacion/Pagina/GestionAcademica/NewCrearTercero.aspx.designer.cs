@@ -42,6 +42,15 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
         protected global::System.Web.UI.WebControls.Button btnguardardatos;
 
         /// <summary>
+        /// Control btncancelar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btncancelar;
+
+        /// <summary>
         /// Control txtprimernombre.
         /// </summary>
         /// <remarks>
@@ -175,6 +184,15 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtdireccion;
+
+        /// <summary>
+        /// Control paneldatosestudiantes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl paneldatosestudiantes;
 
         /// <summary>
         /// Control txtnombreacudiente.

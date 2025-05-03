@@ -14,7 +14,21 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                if (Request.Params["IdTipoTercero"] != null)
+                {
+                    ViewState["IdTipoTercero"] = Request.Params["IdTipoTercero"];
+                }
+                else
+                {
+                    ViewState["IdTipoTercero"] = "1";
+                }
+                if (Request.Params["Guardo"] != null)
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(), "SweetAlert", "swal('Mensaje SIE', 'Datos Guardados con Exito', 'success');", true);
+                }
+            }
         }
         SqlConnection conn = BDCOMUN.obtenerCOnexion();
         SqlCommand cmd = null;
@@ -30,6 +44,15 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
 
                 SqlCommand cmd = new SqlCommand("[Educacion].[STP_CREAR_TERCEROS]", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
+                if (ViewState["IdTipoTercero"].ToString() == "2")
+                {
+                    cmd.Parameters.Add("@ID_TIPO_TERCERO", SqlDbType.Int).Value =2;
+                }
+                else
+                {
+                    cmd.Parameters.Add("@ID_TIPO_TERCERO", SqlDbType.Int).Value = 1;
+                }
+              
                 cmd.Parameters.Add("@NOMBRE_COMPLETO", SqlDbType.NVarChar).Value = txtalumno.Text;
                 cmd.Parameters.Add("@OPERACION", SqlDbType.Int).Value = 2;
 
@@ -47,12 +70,28 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
 
         protected void btnnuevo_Click(object sender, EventArgs e)
         {
-            Response.Redirect("NewCrearTercero.aspx");
-        }
+            if (ViewState["IdTipoTercero"].ToString() == "2")
+            {
+                Response.Redirect("NewCrearTercero.aspx?IdTipoTercero=2");
+            }
+            else
+            {
+                Response.Redirect("NewCrearTercero.aspx?IdTipoTercero=1");
+            } 
+        } 
 
-        protected void btneditar_Click()
+        protected void btneditar_Command(object sender, CommandEventArgs e)
         {
-
+            string IdTercero = e.CommandArgument.ToString();
+            if (ViewState["IdTipoTercero"].ToString() == "2")
+            {
+                Response.Redirect("NewCrearTercero.aspx?IdTercero=" + IdTercero + "&IdTipoTercero=2");
+            }
+            else
+            {
+                Response.Redirect("NewCrearTercero.aspx?IdTercero=" + IdTercero + "&IdTipoTercero=1");
+            }
+           
         }
     }
 }

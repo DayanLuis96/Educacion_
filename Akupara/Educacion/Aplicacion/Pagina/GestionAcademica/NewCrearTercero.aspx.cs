@@ -29,6 +29,31 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
                 CargarListasAdicionales("Matricula");
                 CargarListasAdicionales("Modalidad");
                 CargarListasAdicionales("Sedes");
+
+                if (Request.Params["IdTipoTercero"] != null)
+                {
+                    ViewState["IdTipoTercero"] = Request.Params["IdTipoTercero"];
+                    if (ViewState["IdTipoTercero"].ToString() == "2")
+                    {
+                        paneldatosestudiantes.Visible = false;
+                    }
+                }
+                else
+                {
+                    ViewState["IdTipoTercero"] = "1";
+                }
+
+
+                if (Request.Params["IdTercero"] != null)
+                {
+                    ViewState["IdRegistro"] = Request.Params["IdTercero"];
+                    ConsultarTercero(Convert.ToInt32(ViewState["IdRegistro"]));
+                    ConsultarSalud(Convert.ToInt32(ViewState["IdRegistro"]));
+                    ConsultarAcudiente(Convert.ToInt32(ViewState["IdRegistro"]));
+                    ConsultarDatosAcademicos(Convert.ToInt32(ViewState["IdRegistro"]));
+                    ConsultarInternos(Convert.ToInt32(ViewState["IdRegistro"]));
+                    txtcodigointerno.Text = ViewState["IdRegistro"].ToString();
+                }
             }
         }
         SqlConnection conn = BDCOMUN.obtenerCOnexion();
@@ -64,11 +89,11 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
             if (Movimiento == "FactorRh")
             {
                 cmd.Parameters.Add("@OPERACION", SqlDbType.Int).Value = 9;
-            } 
+            }
             if (Movimiento == "Genero")
             {
                 cmd.Parameters.Add("@OPERACION", SqlDbType.Int).Value = 10;
-            } 
+            }
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
 
@@ -113,7 +138,7 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
                 txtgenero.DataValueField = "ID";
                 txtgenero.DataTextField = "NOMBRE";
                 txtgenero.DataBind();
-            } 
+            }
             conn.Close();
         }
         public void CargarListasAdicionales(String Movimiento)
@@ -125,7 +150,7 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
             }
 
             SqlCommand cmd = new SqlCommand("[Educacion].[STP_DATOS_ACADEMICOS]", conn);
-            cmd.CommandType = CommandType.StoredProcedure; 
+            cmd.CommandType = CommandType.StoredProcedure;
             if (Movimiento == "Anio")
             {
                 cmd.Parameters.Add("@OPERACION", SqlDbType.Int).Value = 5;
@@ -198,7 +223,7 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
                 txtsedes.DataValueField = "ID";
                 txtsedes.DataTextField = "NOMBRE";
                 txtsedes.DataBind();
-            } 
+            }
             if (Movimiento == "Parentesto")
             {
                 txtparentesco.DataSource = dt;
@@ -252,7 +277,7 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
                 ClientScript.RegisterStartupScript(this.GetType(), "SweetAlert", "swal('Mensaje!', 'Seleccione el municipio de nacimiento', 'info');", true);
                 return;
             }
-             
+
 
             if (string.IsNullOrWhiteSpace(txtdireccion.Text))
             {
@@ -285,7 +310,7 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
                 }
                 SqlCommand cmd = new SqlCommand("[Educacion].[STP_CREAR_TERCEROS]", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add("@ID_TIPO_TERCERO", SqlDbType.Int).Value = 1;/*Estudiante*/
+                cmd.Parameters.Add("@ID_TIPO_TERCERO", SqlDbType.Int).Value = ViewState["IdTipoTercero"];/*Estudiante*/
                 cmd.Parameters.Add("@ID_TIPO_DOCUMENTO", SqlDbType.Int).Value = txttipodocumento.SelectedValue;
                 cmd.Parameters.Add("@DOCUMENTO", SqlDbType.NVarChar).Value = txtdocumento.Text;
                 cmd.Parameters.Add("@PRIMER_NOMBRE", SqlDbType.NVarChar).Value = txtprimernombre.Text;
@@ -298,13 +323,23 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
                 cmd.Parameters.Add("@GRUPO_SANGUINEO", SqlDbType.Int).Value = txtgruposanguineo.SelectedValue;
                 cmd.Parameters.Add("@ID_FACTOR_RH", SqlDbType.Int).Value = txtfactorrh.SelectedValue;
                 cmd.Parameters.Add("@EMAIL", SqlDbType.NVarChar).Value = txtcorreo.Text;
+                cmd.Parameters.Add("@DIRECCION", SqlDbType.NVarChar).Value = txtdireccion.Text;
                 cmd.Parameters.Add("@CELULAR", SqlDbType.NVarChar).Value = txtcelular.Text;
                 cmd.Parameters.Add("@TELEFONO_FIJO", SqlDbType.NVarChar).Value = txttelefonofijo.Text;
                 cmd.Parameters.Add("@ID_ESTRATO", SqlDbType.Int).Value = txtestrato.SelectedValue;
-                cmd.Parameters.Add("@ID_MUNICIPIO", SqlDbType.Int).Value = txtmunicipio.SelectedValue; 
+                cmd.Parameters.Add("@ID_MUNICIPIO", SqlDbType.Int).Value = txtmunicipio.SelectedValue;
                 cmd.Parameters.Add("@ID_TERCERO_USUARIO", SqlDbType.Int).Value = Session["ID_TERCERO_USUARIO"];
-                cmd.Parameters.Add("@IP_MAQUINA", SqlDbType.NVarChar).Value = Request.UserHostAddress; 
-                cmd.Parameters.Add("@OPERACION", SqlDbType.Int).Value = 1;
+                cmd.Parameters.Add("@IP_MAQUINA", SqlDbType.NVarChar).Value = Request.UserHostAddress;
+                if (ViewState["IdRegistro"] != null)
+                {
+                    cmd.Parameters.Add("@OPERACION", SqlDbType.Int).Value = 3;
+                    cmd.Parameters.Add("@ID", SqlDbType.Int).Value = ViewState["IdRegistro"];
+                }
+                else
+                {
+                    cmd.Parameters.Add("@OPERACION", SqlDbType.Int).Value = 1;
+                }
+
                 leer = cmd.ExecuteReader();
                 if (leer.Read() != false)
                 {
@@ -312,13 +347,23 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
                 }
                 conn.Close();
                 leer.Close();
+                if (ViewState["IdTipoTercero"].ToString() != "2")
+                {
+                    GuardarAcudiente(Convert.ToInt32(ViewState["IdRegistro"]));
+                    GuardarSalud(Convert.ToInt32(ViewState["IdRegistro"]));
+                    GuardarDatosAcademicos(Convert.ToInt32(ViewState["IdRegistro"]));
+                    GuardarDatosInternos(Convert.ToInt32(ViewState["IdRegistro"]));
+                }
 
-                GuardarAcudiente(Convert.ToInt32(ViewState["IdRegistro"]));
-                GuardarSalud(Convert.ToInt32(ViewState["IdRegistro"]));
-                GuardarDatosAcademicos(Convert.ToInt32(ViewState["IdRegistro"]));
-
-                ClientScript.RegisterStartupScript(this.GetType(), "SweetAlert", "swal('Mensaje SIE', 'Datos Guardados con Exito', 'success');", true);
-
+                if (ViewState["IdTipoTercero"].ToString() == "2")
+                {
+                    Response.Redirect("NewConsultarTerceros.aspx?Guardo=" + ViewState["IdRegistro"] + "&IdTipoTercero=2");
+                }
+                else
+                {
+                    Response.Redirect("NewConsultarTerceros.aspx?Guardo=" + ViewState["IdRegistro"] + "&IdTipoTercero=1");
+                }
+              
             }
             catch (Exception er)
             {
@@ -336,10 +381,10 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@ID_TERCERO", SqlDbType.Int).Value = IdTercero;
             cmd.Parameters.Add("@NOMBRE_ACUDIENTE", SqlDbType.NVarChar).Value = txtnombreacudiente.Text;
-            if(txtparentesco.SelectedValue!="")
+            if (txtparentesco.SelectedValue != "")
             {
                 cmd.Parameters.Add("@ID_PARENTESCO", SqlDbType.Int).Value = txtparentesco.SelectedValue;
-            } 
+            }
             cmd.Parameters.Add("@DOCUMENTO", SqlDbType.NVarChar).Value = txtdocumentoacudiente.Text;
             cmd.Parameters.Add("@TELEFONO", SqlDbType.NVarChar).Value = txttelefonoacudiente.Text;
             cmd.Parameters.Add("@EMAIL", SqlDbType.NVarChar).Value = txtcorreoacudiente.Text;
@@ -347,7 +392,7 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
             cmd.Parameters.Add("@ID_TERCERO_USUARIO", SqlDbType.Int).Value = Session["ID_TERCERO_USUARIO"];
             cmd.Parameters.Add("@FECHA_CREACION", SqlDbType.DateTime2).Value = DateTime.Now;
             cmd.Parameters.Add("@FECHA_MODIFICACION", SqlDbType.DateTime2).Value = DateTime.Now;
-            cmd.Parameters.Add("@IP_MAQUINA", SqlDbType.NVarChar).Value = Request.UserHostAddress;  
+            cmd.Parameters.Add("@IP_MAQUINA", SqlDbType.NVarChar).Value = Request.UserHostAddress;
             cmd.Parameters.Add("@OPERACION", SqlDbType.Int).Value = 1;
             cmd.ExecuteNonQuery();
             conn.Close();
@@ -364,8 +409,32 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
             cmd.Parameters.Add("@EPS_SEGURO", SqlDbType.NVarChar).Value = txteps.Text.Trim();
             cmd.Parameters.Add("@CONDICIONES_MEDICAS", SqlDbType.NVarChar).Value = txtcondicionesmedicas.Text.Trim();
             cmd.Parameters.Add("@PERSONAS_AUTORIZADAS", SqlDbType.NVarChar).Value = txtpersonasautorizadas.Text.Trim();
-            cmd.Parameters.Add("@VACUNAS_ACTUALIZADAS", SqlDbType.Bit).Value = checesquemavacunacion.Checked; 
-            cmd.Parameters.Add("@ID_TERCERO_USUARIO", SqlDbType.Int).Value = Convert.ToInt32(Session["ID_TERCERO_USUARIO"]); 
+            cmd.Parameters.Add("@VACUNAS_ACTUALIZADAS", SqlDbType.Bit).Value = checesquemavacunacion.Checked;
+            cmd.Parameters.Add("@ID_TERCERO_USUARIO", SqlDbType.Int).Value = Convert.ToInt32(Session["ID_TERCERO_USUARIO"]);
+            cmd.Parameters.Add("@IP_MAQUINA", SqlDbType.NVarChar).Value = Request.UserHostAddress;
+            cmd.Parameters.Add("@OPERACION", SqlDbType.Int).Value = 1;
+            cmd.ExecuteNonQuery();
+            conn.Close();
+        }
+        public void GuardarDatosInternos(Int32 IdTercero)
+        {
+            if (conn.State == System.Data.ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+            SqlCommand cmd = new SqlCommand("[Educacion].[STP_DATOS_CONTROL_INTERNO]", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@ID_TERCERO", SqlDbType.Int).Value = IdTercero;
+            if (txtfechainscripcion.Text != "")
+            {
+                cmd.Parameters.Add("@FECHA_INSCRIPCION", SqlDbType.Date).Value = txtfechainscripcion.Text;
+            }
+            if (txtfechamatricula.Text != "")
+            {
+                cmd.Parameters.Add("@FECHA_MATRICULA", SqlDbType.Date).Value = txtfechamatricula.Text;
+            }
+            cmd.Parameters.Add("@OBSERVACIONES", SqlDbType.NVarChar).Value = txtobservaciones.Text.Trim();
+            cmd.Parameters.Add("@ID_TERCERO_USUARIO", SqlDbType.Int).Value = Convert.ToInt32(Session["ID_TERCERO_USUARIO"]);
             cmd.Parameters.Add("@IP_MAQUINA", SqlDbType.NVarChar).Value = Request.UserHostAddress;
             cmd.Parameters.Add("@OPERACION", SqlDbType.Int).Value = 1;
             cmd.ExecuteNonQuery();
@@ -409,6 +478,243 @@ namespace Akupara.Educacion.Aplicacion.Pagina.GestionAcademica
             cmd.Parameters.Add("@OPERACION", SqlDbType.Int).Value = 1;
             cmd.ExecuteNonQuery();
             conn.Close();
+        }
+
+        public void ConsultarTercero(Int32 IdTercero)
+        {
+            if (conn.State == System.Data.ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+            SqlCommand cmd = new SqlCommand("[Educacion].[STP_CREAR_TERCEROS]", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@ID", SqlDbType.Int).Value = IdTercero;
+            cmd.Parameters.Add("@OPERACION", SqlDbType.Int).Value = 11;
+            leer = cmd.ExecuteReader();
+            if (leer.Read())
+            {
+                ViewState["IdRegistro"] = leer.GetInt32(0); // ID registro principal
+
+                // --- Controles normales ---
+                txtdocumento.Text = leer["DOCUMENTO"].ToString();
+                txtprimernombre.Text = leer["PRIMER_NOMBRE"].ToString();
+                txtsegundonombre.Text = leer["SEGUNDO_NOMBRE"].ToString();
+                txtprimerapellido.Text = leer["PRIMER_APELLIDO"].ToString();
+                txtsegundoapellido.Text = leer["SEGUNDO_APELLIDO"].ToString();
+
+                if (leer["FECHA_NACIMIENTO"] != DBNull.Value)
+                    txtfechanacimiento.Text = Convert.ToDateTime(leer["FECHA_NACIMIENTO"]).ToString("yyyy-MM-dd");
+                else
+                    txtfechanacimiento.Text = "";
+
+                txtlugarnacimiento.Text = leer["LUGAR_NACIMIENTO"].ToString();
+                txtcorreo.Text = leer["EMAIL"].ToString();
+                txtcelular.Text = leer["CELULAR"].ToString();
+                txttelefonofijo.Text = leer["TELEFONO_FIJO"].ToString();
+                txtdireccion.Text = leer["DIRECCION"].ToString();
+
+                // --- Controles de tipo ID_, validar NULL antes de asignar ---
+                if (leer["ID_TIPO_DOCUMENTO"] != DBNull.Value)
+                    txttipodocumento.SelectedValue = leer["ID_TIPO_DOCUMENTO"].ToString();
+
+                if (leer["ID_GENERO"] != DBNull.Value)
+                    txtgenero.SelectedValue = leer["ID_GENERO"].ToString();
+
+                if (leer["GRUPO_SANGUINEO"] != DBNull.Value)
+                    txtgruposanguineo.SelectedValue = leer["GRUPO_SANGUINEO"].ToString();
+
+                if (leer["ID_FACTOR_RH"] != DBNull.Value)
+                    txtfactorrh.SelectedValue = leer["ID_FACTOR_RH"].ToString();
+
+                if (leer["ID_ESTRATO"] != DBNull.Value)
+                    txtestrato.SelectedValue = leer["ID_ESTRATO"].ToString();
+
+                if (leer["ID_MUNICIPIO"] != DBNull.Value)
+                    txtmunicipio.SelectedValue = leer["ID_MUNICIPIO"].ToString();
+            }
+            leer.Close();
+            conn.Close();
+        }
+        public void ConsultarSalud(Int32 IdTercero)
+        {
+            if (conn.State == System.Data.ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+
+            SqlCommand cmd = new SqlCommand("[Educacion].[STP_SALUD_BIENESTAR_TERCEROS]", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@ID_TERCERO", SqlDbType.Int).Value = IdTercero;
+            cmd.Parameters.Add("@OPERACION", SqlDbType.Int).Value = 5; // Aquí CONSULTAR es operacion 5 (como en los otros)
+
+            SqlDataReader leer = cmd.ExecuteReader();
+            if (leer.Read())
+            {
+                if (leer["EPS_SEGURO"] != DBNull.Value)
+                    txteps.Text = leer["EPS_SEGURO"].ToString();
+                else
+                    txteps.Text = "";
+
+                if (leer["CONDICIONES_MEDICAS"] != DBNull.Value)
+                    txtcondicionesmedicas.Text = leer["CONDICIONES_MEDICAS"].ToString();
+                else
+                    txtcondicionesmedicas.Text = "";
+
+                if (leer["PERSONAS_AUTORIZADAS"] != DBNull.Value)
+                    txtpersonasautorizadas.Text = leer["PERSONAS_AUTORIZADAS"].ToString();
+                else
+                    txtpersonasautorizadas.Text = "";
+
+                if (leer["VACUNAS_ACTUALIZADAS"] != DBNull.Value)
+                    checesquemavacunacion.Checked = Convert.ToBoolean(leer["VACUNAS_ACTUALIZADAS"]);
+                else
+                    checesquemavacunacion.Checked = false;
+            }
+
+            leer.Close();
+            conn.Close();
+
+        }
+        public void ConsultarAcudiente(Int32 IdTercero)
+        {
+            if (conn.State == System.Data.ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+
+            SqlCommand cmd = new SqlCommand("[Educacion].[STP_ACUDIENTE_TERCERO]", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@ID_TERCERO", SqlDbType.Int).Value = IdTercero;
+            cmd.Parameters.Add("@OPERACION", SqlDbType.Int).Value = 4; // Operación 4 es CONSULTAR
+
+            SqlDataReader leer = cmd.ExecuteReader();
+            if (leer.Read())
+            {
+                if (leer["NOMBRE_ACUDIENTE"] != DBNull.Value)
+                    txtnombreacudiente.Text = leer["NOMBRE_ACUDIENTE"].ToString();
+                else
+                    txtnombreacudiente.Text = "";
+
+                if (leer["ID_PARENTESCO"] != DBNull.Value)
+                    txtparentesco.SelectedValue = leer["ID_PARENTESCO"].ToString();
+                else
+                    txtparentesco.SelectedIndex = -1; // Sin selección si viene NULL
+
+                if (leer["DOCUMENTO"] != DBNull.Value)
+                    txtdocumentoacudiente.Text = leer["DOCUMENTO"].ToString();
+                else
+                    txtdocumentoacudiente.Text = "";
+
+                if (leer["TELEFONO"] != DBNull.Value)
+                    txttelefonoacudiente.Text = leer["TELEFONO"].ToString();
+                else
+                    txttelefonoacudiente.Text = "";
+
+                if (leer["EMAIL"] != DBNull.Value)
+                    txtcorreoacudiente.Text = leer["EMAIL"].ToString();
+                else
+                    txtcorreoacudiente.Text = "";
+
+                if (leer["DIRECCION"] != DBNull.Value)
+                    txtdireccionacudiente.Text = leer["DIRECCION"].ToString();
+                else
+                    txtdireccionacudiente.Text = "";
+            }
+
+            leer.Close();
+            conn.Close();
+
+        }
+        public void ConsultarDatosAcademicos(Int32 IdTercero)
+        {
+            if (conn.State == System.Data.ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+
+            SqlCommand cmd = new SqlCommand("[Educacion].[STP_DATOS_ACADEMICOS]", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@ID_TERCERO", SqlDbType.Int).Value = IdTercero;
+            cmd.Parameters.Add("@OPERACION", SqlDbType.Int).Value = 2; // Operación para consultar
+
+            SqlDataReader leer = cmd.ExecuteReader();
+            if (leer.Read())
+            {
+                if (leer["ANIO_LECTIVO"] != DBNull.Value)
+                    txtaniolectivos.SelectedValue = leer["ANIO_LECTIVO"].ToString();
+                else
+                    txtaniolectivos.SelectedIndex = -1;
+
+                if (leer["ID_GRADO"] != DBNull.Value)
+                    txtgrados.SelectedValue = leer["ID_GRADO"].ToString();
+                else
+                    txtgrados.SelectedIndex = -1;
+
+                if (leer["ID_JORNADA"] != DBNull.Value)
+                    txtjornada.SelectedValue = leer["ID_JORNADA"].ToString();
+                else
+                    txtjornada.SelectedIndex = -1;
+
+                if (leer["ID_ESTADO_ATRICULA"] != DBNull.Value)
+                    txtestadomatricula.SelectedValue = leer["ID_ESTADO_ATRICULA"].ToString();
+                else
+                    txtestadomatricula.SelectedIndex = -1;
+
+                if (leer["ID_MODALIDAD"] != DBNull.Value)
+                    txtmodalidad.SelectedValue = leer["ID_MODALIDAD"].ToString();
+                else
+                    txtmodalidad.SelectedIndex = -1;
+
+                if (leer["ID_SEDE"] != DBNull.Value)
+                    txtsedes.SelectedValue = leer["ID_SEDE"].ToString();
+                else
+                    txtsedes.SelectedIndex = -1;
+            }
+
+            leer.Close();
+            conn.Close();
+
+        }
+        public void ConsultarInternos(Int32 IdTercero)
+        {
+            if (conn.State == System.Data.ConnectionState.Closed)
+            {
+                conn.Open();
+            }
+
+            SqlCommand cmd = new SqlCommand("[Educacion].[STP_DATOS_CONTROL_INTERNO]", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@ID_TERCERO", SqlDbType.Int).Value = IdTercero;
+            cmd.Parameters.Add("@OPERACION", SqlDbType.Int).Value = 2; // Operación de consulta
+
+            SqlDataReader leer = cmd.ExecuteReader();
+            if (leer.Read())
+            {
+                if (leer["FECHA_INSCRIPCION"] != DBNull.Value)
+                    txtfechainscripcion.Text = Convert.ToDateTime(leer["FECHA_INSCRIPCION"]).ToString("yyyy-MM-dd");
+                else
+                    txtfechainscripcion.Text = "";
+
+                if (leer["FECHA_MATRICULA"] != DBNull.Value)
+                    txtfechamatricula.Text = Convert.ToDateTime(leer["FECHA_MATRICULA"]).ToString("yyyy-MM-dd");
+                else
+                    txtfechamatricula.Text = "";
+
+                if (leer["OBSERVACIONES"] != DBNull.Value)
+                    txtobservaciones.Text = leer["OBSERVACIONES"].ToString();
+                else
+                    txtobservaciones.Text = "";
+            }
+
+            leer.Close();
+            conn.Close();
+
+
+        }
+
+        protected void btncancelar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("NewConsultarTerceros.aspx");
         }
     }
 }

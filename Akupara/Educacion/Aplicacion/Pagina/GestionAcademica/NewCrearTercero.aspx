@@ -20,7 +20,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <h5 class="text-primary">📄 Datos básicos del alumno
+    <h5 class="text-primary">📄 Datos básicos
     </h5>
     <hr class="mb-4">
     <div class=" row">
@@ -47,6 +47,11 @@
         <div class="col-md-3">
             <div class="form-group">
                 <asp:Button Text="Guardar Datos" ID="btnguardardatos" CssClass="btn btn-outline-success btn-sm form-control form-control-sm" OnClick="btnguardardatos_Click" OnClientClick="this.disabled=true;" UseSubmitBehavior="false" runat="server" />
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group">
+                <asp:Button Text="Cancelar" ID="btncancelar" CssClass="btn btn-outline-danger btn-sm form-control form-control-sm" OnClick="btncancelar_Click" OnClientClick="this.disabled=true;" UseSubmitBehavior="false" runat="server" />
             </div>
         </div>
     </div>
@@ -222,294 +227,296 @@
         </div>
 
     </div>
-    <hr class="my-4">
-    <h5 class="text-primary">👨‍👩‍👧 Datos Familiares / Acudiente
-    </h5>
-    <hr class="mb-4">
-
     <div class="row">
-        <!-- Nombre Completo del Acudiente -->
-        <div class="col-md-6">
-            <div class="form-group">
-                <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Nombre Acudiente*</span>
+        <div clas="col-md-12" runat="server" id="paneldatosestudiantes">
+        <hr class="my-4">
+        <h5 class="text-primary">👨‍👩‍👧 Datos Familiares / Acudiente
+        </h5>
+        <hr class="mb-4">
+
+        <div class="row">
+            <!-- Nombre Completo del Acudiente -->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Nombre Acudiente*</span>
+                        </div>
+                        <asp:TextBox runat="server" CssClass="form-control form-control-sm" ID="txtnombreacudiente" />
                     </div>
-                    <asp:TextBox runat="server" CssClass="form-control form-control-sm" ID="txtnombreacudiente" />
+                </div>
+            </div>
+
+            <!-- Parentesco -->
+            <div class="col-md-3">
+                <div class="form-group">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Parentesco*</span>
+                        </div>
+                        <asp:DropDownList ID="txtparentesco" runat="server" CssClass="form-control form-control-sm">
+                        </asp:DropDownList>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Número de Documento del Acudiente -->
+            <div class="col-md-3">
+                <div class="form-group">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Doc. Acudiente*</span>
+                        </div>
+                        <asp:TextBox runat="server" CssClass="form-control form-control-sm" ID="txtdocumentoacudiente" />
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Parentesco -->
-        <div class="col-md-3">
-            <div class="form-group">
-                <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Parentesco*</span>
+        <div class="row">
+            <!-- Teléfono de contacto -->
+            <div class="col-md-3">
+                <div class="form-group">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Teléfono*</span>
+                        </div>
+                        <asp:TextBox runat="server" CssClass="form-control form-control-sm" ID="txttelefonoacudiente" />
                     </div>
-                    <asp:DropDownList ID="txtparentesco" runat="server" CssClass="form-control form-control-sm">
-                    </asp:DropDownList>
+                </div>
+            </div>
+
+            <!-- Correo del acudiente -->
+            <div class="col-md-3">
+                <div class="form-group">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Correo</span>
+                        </div>
+                        <asp:TextBox runat="server" CssClass="form-control form-control-sm" ID="txtcorreoacudiente" TextMode="Email" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dirección (si es diferente) -->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Dirección Acudiente</span>
+                        </div>
+                        <asp:TextBox runat="server" CssClass="form-control form-control-sm" ID="txtdireccionacudiente" />
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Número de Documento del Acudiente -->
-        <div class="col-md-3">
-            <div class="form-group">
-                <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Doc. Acudiente*</span>
-                    </div>
-                    <asp:TextBox runat="server" CssClass="form-control form-control-sm" ID="txtdocumentoacudiente" />
+        <div class="row">
+            <!-- Responsable Matrícula -->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <asp:CheckBox Text="Responsable Matrícula" ID="responmatricula" CssClass=" badge badge-info" runat="server" />
+                    <asp:CheckBox Text="Responsable Financiero" ID="responfinanciero" CssClass=" badge badge-success" runat="server" />
                 </div>
             </div>
         </div>
+        <hr class="my-4">
+        <h5 class="text-primary">❤️ Datos Médicos y de Bienestar
+        </h5>
+        <hr class="mb-4">
+
+        <div class="row">
+            <!-- EPS o Seguro Médico -->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">EPS / Seguro*</span>
+                        </div>
+                        <asp:TextBox ID="txteps" runat="server" CssClass="form-control form-control-sm" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Condiciones médicas especiales -->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Condiciones Médicas</span>
+                        </div>
+                        <asp:TextBox ID="txtcondicionesmedicas" runat="server" CssClass="form-control form-control-sm" placeholder="Alergias, discapacidades, medicamentos..." />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Personas autorizadas para recoger al alumno -->
+            <div class="col-md-12">
+                <div class="form-group">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Personas Autorizadas</span>
+                        </div>
+                        <asp:TextBox ID="txtpersonasautorizadas" runat="server" CssClass="form-control form-control-sm" TextMode="MultiLine" Rows="2" placeholder="Ingrese nombres de personas autorizadas para recoger al alumno..." />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Vacunas Actualizadas -->
+            <div class="col-md-4">
+                <div class="form-group">
+                    <asp:CheckBox Text="Esquema Vacunacion Actualizado" ID="checesquemavacunacion" CssClass="badge badge-info" runat="server" />
+                </div>
+            </div>
+        </div>
+
+
+        <hr class="my-4">
+        <h5 class="text-primary">🏫 Datos Académicos
+        </h5>
+        <hr class="mb-4">
+        <div class="row">
+            <!-- Año lectivo de matrícula -->
+            <div class="col-md-3">
+                <div class="form-group">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Año Lectivo*</span>
+                        </div>
+                        <asp:DropDownList ID="txtaniolectivos" runat="server" CssClass="form-control form-control-sm" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grado a cursar -->
+            <div class="col-md-3">
+                <div class="form-group">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Grado*</span>
+                        </div>
+                        <asp:DropDownList ID="txtgrados" runat="server" CssClass="form-control form-control-sm" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jornada -->
+            <div class="col-md-3">
+                <div class="form-group">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Jornada*</span>
+                        </div>
+                        <asp:DropDownList ID="txtjornada" runat="server" CssClass="form-control form-control-sm" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Estado de Matrícula -->
+            <div class="col-md-3">
+                <div class="form-group">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Estado Matrícula*</span>
+                        </div>
+                        <asp:DropDownList ID="txtestadomatricula" runat="server" CssClass="form-control form-control-sm" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Modalidad -->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Modalidad*</span>
+                        </div>
+                        <asp:DropDownList ID="txtmodalidad" runat="server" CssClass="form-control form-control-sm" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sede -->
+            <div class="col-md-6">
+                <div class="form-group">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Sede</span>
+                        </div>
+                        <asp:DropDownList ID="txtsedes" runat="server" CssClass="form-control form-control-sm" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-4">
+        <h5 class="text-primary">🛡️ Datos de Control Interno (Uso del Colegio)
+        </h5>
+        <hr class="mb-4">
+
+        <div class="row">
+            <!-- Código interno del estudiante -->
+            <div class="col-md-4">
+                <div class="form-group">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Código Interno</span>
+                        </div>
+                        <asp:TextBox ID="txtcodigointerno" Enabled="false" runat="server" CssClass="form-control form-control-sm" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fecha de inscripción -->
+            <div class="col-md-4">
+                <div class="form-group">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Fecha Inscripción*</span>
+                        </div>
+                        <asp:TextBox ID="txtfechainscripcion" runat="server" CssClass="form-control form-control-sm" TextMode="Date" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fecha de matrícula -->
+            <div class="col-md-4">
+                <div class="form-group">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Fecha Matrícula*</span>
+                        </div>
+                        <asp:TextBox ID="txtfechamatricula" runat="server" CssClass="form-control form-control-sm" TextMode="Date" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Observaciones -->
+            <div class="col-md-12">
+                <div class="form-group">
+                    <div class="input-group input-group-sm">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Observaciones</span>
+                        </div>
+                        <asp:TextBox ID="txtobservaciones" runat="server" CssClass="form-control form-control-sm" TextMode="MultiLine" Rows="3" placeholder="Ingrese aquí cualquier observación adicional..." />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4">
+        <h5 class="text-primary">📎 Documentos Requeridos (Subida de Archivos)
+        </h5>
+        <hr class="mb-4">
     </div>
-
-    <div class="row">
-        <!-- Teléfono de contacto -->
-        <div class="col-md-3">
-            <div class="form-group">
-                <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Teléfono*</span>
-                    </div>
-                    <asp:TextBox runat="server" CssClass="form-control form-control-sm" ID="txttelefonoacudiente" />
-                </div>
-            </div>
         </div>
-
-        <!-- Correo del acudiente -->
-        <div class="col-md-3">
-            <div class="form-group">
-                <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Correo</span>
-                    </div>
-                    <asp:TextBox runat="server" CssClass="form-control form-control-sm" ID="txtcorreoacudiente" TextMode="Email" />
-                </div>
-            </div>
-        </div>
-
-        <!-- Dirección (si es diferente) -->
-        <div class="col-md-6">
-            <div class="form-group">
-                <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Dirección Acudiente</span>
-                    </div>
-                    <asp:TextBox runat="server" CssClass="form-control form-control-sm" ID="txtdireccionacudiente" />
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <!-- Responsable Matrícula -->
-        <div class="col-md-6">
-            <div class="form-group">
-                <asp:CheckBox Text="Responsable Matrícula" ID="responmatricula" CssClass=" badge badge-info" runat="server" />
-                <asp:CheckBox Text="Responsable Financiero" ID="responfinanciero" CssClass=" badge badge-success" runat="server" />
-            </div>
-        </div>
-    </div>
-    <hr class="my-4">
-    <h5 class="text-primary">❤️ Datos Médicos y de Bienestar
-    </h5>
-    <hr class="mb-4">
-
-    <div class="row">
-        <!-- EPS o Seguro Médico -->
-        <div class="col-md-6">
-            <div class="form-group">
-                <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">EPS / Seguro*</span>
-                    </div>
-                    <asp:TextBox ID="txteps" runat="server" CssClass="form-control form-control-sm" />
-                </div>
-            </div>
-        </div>
-
-        <!-- Condiciones médicas especiales -->
-        <div class="col-md-6">
-            <div class="form-group">
-                <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Condiciones Médicas</span>
-                    </div>
-                    <asp:TextBox ID="txtcondicionesmedicas" runat="server" CssClass="form-control form-control-sm" placeholder="Alergias, discapacidades, medicamentos..." />
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <!-- Personas autorizadas para recoger al alumno -->
-        <div class="col-md-12">
-            <div class="form-group">
-                <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Personas Autorizadas</span>
-                    </div>
-                    <asp:TextBox ID="txtpersonasautorizadas" runat="server" CssClass="form-control form-control-sm" TextMode="MultiLine" Rows="2" placeholder="Ingrese nombres de personas autorizadas para recoger al alumno..." />
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <!-- Vacunas Actualizadas -->
-        <div class="col-md-4">
-            <div class="form-group">
-                <asp:CheckBox Text="Esquema Vacunacion Actualizado" ID="checesquemavacunacion" CssClass="badge badge-info" runat="server" />
-            </div>
-        </div>
-    </div>
-
-
-    <hr class="my-4">
-    <h5 class="text-primary">🏫 Datos Académicos
-    </h5>
-    <hr class="mb-4">
-    <div class="row">
-        <!-- Año lectivo de matrícula -->
-        <div class="col-md-3">
-            <div class="form-group">
-                <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Año Lectivo*</span>
-                    </div>
-                     <asp:DropDownList ID="txtaniolectivos" runat="server" CssClass="form-control form-control-sm" />  
-                </div>
-            </div>
-        </div>
-
-        <!-- Grado a cursar -->
-        <div class="col-md-3">
-            <div class="form-group">
-                <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Grado*</span>
-                    </div> 
-                     <asp:DropDownList ID="txtgrados" runat="server" CssClass="form-control form-control-sm" /> 
-                </div>
-            </div>
-        </div>
-
-        <!-- Jornada -->
-        <div class="col-md-3">
-            <div class="form-group">
-                <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Jornada*</span>
-                    </div>
-                    <asp:DropDownList ID="txtjornada" runat="server" CssClass="form-control form-control-sm" />
-                </div>
-            </div>
-        </div>
-
-        <!-- Estado de Matrícula -->
-        <div class="col-md-3">
-            <div class="form-group">
-                <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Estado Matrícula*</span>
-                    </div>
-                    <asp:DropDownList ID="txtestadomatricula" runat="server" CssClass="form-control form-control-sm" />
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <!-- Modalidad -->
-        <div class="col-md-6">
-            <div class="form-group">
-                <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Modalidad*</span>
-                    </div>
-                    <asp:DropDownList ID="txtmodalidad" runat="server" CssClass="form-control form-control-sm" />
-                </div>
-            </div>
-        </div>
-
-        <!-- Sede -->
-        <div class="col-md-6">
-            <div class="form-group">
-                <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Sede</span>
-                    </div>
-                    <asp:DropDownList ID="txtsedes" runat="server" CssClass="form-control form-control-sm" />
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="my-4">
-    <h5 class="text-primary">🛡️ Datos de Control Interno (Uso del Colegio)
-    </h5>
-    <hr class="mb-4">
-
-    <div class="row">
-        <!-- Código interno del estudiante -->
-        <div class="col-md-4">
-            <div class="form-group">
-                <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Código Interno</span>
-                    </div>
-                    <asp:TextBox ID="txtcodigointerno" runat="server" CssClass="form-control form-control-sm" />
-                </div>
-            </div>
-        </div>
-
-        <!-- Fecha de inscripción -->
-        <div class="col-md-4">
-            <div class="form-group">
-                <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Fecha Inscripción*</span>
-                    </div>
-                    <asp:TextBox ID="txtfechainscripcion" runat="server" CssClass="form-control form-control-sm" TextMode="Date" />
-                </div>
-            </div>
-        </div>
-
-        <!-- Fecha de matrícula -->
-        <div class="col-md-4">
-            <div class="form-group">
-                <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Fecha Matrícula*</span>
-                    </div>
-                    <asp:TextBox ID="txtfechamatricula" runat="server" CssClass="form-control form-control-sm" TextMode="Date" />
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <!-- Observaciones -->
-        <div class="col-md-12">
-            <div class="form-group">
-                <div class="input-group input-group-sm">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Observaciones</span>
-                    </div>
-                    <asp:TextBox ID="txtobservaciones" runat="server" CssClass="form-control form-control-sm" TextMode="MultiLine" Rows="3" placeholder="Ingrese aquí cualquier observación adicional..." />
-                </div>
-            </div>
-        </div>
-    </div>
-    <hr class="my-4">
-    <h5 class="text-primary">📎 Documentos Requeridos (Subida de Archivos)
-    </h5>
-    <hr class="mb-4">
-
-
     <script type="text/javascript">
         function aplicarSelect2() {
             var control = $('#<%= txtmunicipio.ClientID %>');
